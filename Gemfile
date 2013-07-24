@@ -16,6 +16,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'annotate'
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'awesome_print'
 end
 

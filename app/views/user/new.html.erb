@@ -1,0 +1,8 @@
+<h1>Please Create an Account... Again</h1>
+
+<%= form_for @user do |user_form| %>
+  Username: <%= user_form.text_field :user_name %>
+  Password: <%= user_form.text_field :password %>
+ <%= f.submit %>
+<% end %>
+

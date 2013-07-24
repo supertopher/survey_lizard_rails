@@ -1,4 +1,8 @@
 SurveyLizard::Application.routes.draw do
+
+  resources :user
+  resources :survey
+  root to: "survey#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

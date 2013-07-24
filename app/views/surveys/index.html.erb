@@ -1,1 +1,13 @@
 <h1>welcome to the world at surveys#index</h1>
+
+<h1>Your New Survey </h1>
+<%= form_for @survey do |survey_form| %>
+  Name: <%= survey_form.text_field :name %>
+
+  <%= fields_for :questions, @survey.questions do |question |  %>
+    <%= question.text_field :name %>
+    <%= survey_form.submit %>
+  <% end %>
+<% end %>
+
+

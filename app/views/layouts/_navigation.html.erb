@@ -1,12 +1,17 @@
-<nav> 
+<nav>
   <%= link_to "Home", root_url %>
   <% if current_user %>
-  <%= link_to "Profile", "#" %>
-  <%= link_to "Logout", "#" %>
+  <%= current_user.user_name %>
+  <%# link_to "Profile", "#" %>
+  <%= link_to "Logout", session_path(current_user), :method => :delete %>
+  <%# link_to "Create Survey", survey_path %>
   <% else %>
   <%= link_to "Create", new_user_path %>
-  <%= link_to "Login", "#" %>
+  <%= link_to "Login",  new_session_path %>
 
   <% end %>
 </nav>
 
+<% if flash %>
+  <%= flash[:notice] %>
+<% end %>  

@@ -1,7 +1,6 @@
-<h1>Please Create an Account... Again</h1>
-<%= form_for @user do |user_form| %>
+<h1>Login</h1>
+<%= form_for :session, :url => sessions_path do |user_form| %>
 Username: <%= user_form.text_field :user_name %>
 Password: <%= user_form.password_field :password %>
 <%= user_form.submit %>
 <% end %>
-

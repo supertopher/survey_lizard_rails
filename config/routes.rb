@@ -2,6 +2,7 @@ SurveyLizard::Application.routes.draw do
 
   resources :users
   resources :surveys
+  resources :sessions
   root to: "surveys#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -12,10 +12,12 @@
 class User < ActiveRecord::Base
   has_secure_password
 
+  attr_accessible :user_name, :password
+
   has_many :surveys
   has_many :responses
 
   validates_presence_of :user_name
-  validates_presence_of :password_hash
+  validates_presence_of :password_digest
   
 end

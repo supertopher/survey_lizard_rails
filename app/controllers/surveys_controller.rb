@@ -1,10 +1,8 @@
 class SurveysController < ApplicationController
   def index
     @survey = Survey.new
-    @survey.questions.build
-    3.times do
-      @survey.questions.build
-    end
+    question = @survey.questions.build
+    question.choices.build
   end
 
   # def new
@@ -14,16 +12,7 @@ class SurveysController < ApplicationController
 
   def create
     puts "8" * 90
-    ap params
     @survey = Survey.create(params[:survey])
-puts "10" * 7
-    ap @survey
-    # @question = Question.create(params[:questions])
-    # @question.survey = @survey
-    # @survey.user = current_user
-    @survey.save
-    # @question.save!
     redirect_to root_path
   end
 end
-

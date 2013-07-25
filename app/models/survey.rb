@@ -10,8 +10,9 @@
 class Survey < ActiveRecord::Base
 
 
-  attr_accessible :name, :questions_attributes
   has_many :questions
-  belongs_to :user
+  attr_accessible :name, :questions_attributes, :user
   accepts_nested_attributes_for :questions
+  
+  belongs_to :user
 end
